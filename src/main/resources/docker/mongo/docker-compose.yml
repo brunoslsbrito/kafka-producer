@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  mongodb:
+    image: 'mongo'
+    container_name: 'mongodb'
+    volumes:
+      - c:\dev\mongodb-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=memory-game
+      - MONGO_INITDB_ROOT_USERNAME=appuser
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+    ports:
+      - 27017:27017
+  redis-server:
+    image: redis
+    ports:
+      - 6379:6379
