@@ -24,7 +24,7 @@ public class ProducerMessageController {
     private final KafkaProducerService service;
 
     @PostMapping(produces = "application/json", consumes = "application/json")
-    public ResponseEntity producerMessages(@RequestBody @Valid Message message) {
+    public ResponseEntity<?> producerMessages(@RequestBody @Valid Message message) {
         try {
             this.service.sendMessage(message);
             return ResponseEntity.status(HttpStatus.CREATED).build();
