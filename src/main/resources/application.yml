@@ -1,6 +1,8 @@
 server:
   port: 8889
 spring:
+  profiles:
+    active: dev
   kafka:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -12,6 +14,3 @@ spring:
         default.value.serde: org.springframework.kafka.support.serializer.JsonSerde
     template:
       default-topic: poc-kafka
-  data:
-    mongodb:
-      uri: mongodb://appuser:secret@127.0.0.1:27017/memory-game?authSource=admin

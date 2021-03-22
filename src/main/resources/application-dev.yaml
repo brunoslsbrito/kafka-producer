@@ -1,0 +1,3 @@
+data:
+  mongodb:
+    uri: mongodb://appuser:secret@127.0.0.1:27017/memory-game?authSource=admin
