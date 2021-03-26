@@ -6,7 +6,7 @@ services:
     volumes:
       - c:\dev\mongodb-data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=memory-game
+      - MONGO_INITDB_DATABASE=kafka
       - MONGO_INITDB_ROOT_USERNAME=appuser
       - MONGO_INITDB_ROOT_PASSWORD=secret
     ports:
